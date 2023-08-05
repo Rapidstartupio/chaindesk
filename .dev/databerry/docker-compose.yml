@@ -16,7 +16,7 @@ services:
     image: qdrant/qdrant:v1.1.3
     mem_limit: 450m
     ports:
-      - "127.0.0.1:${QDRANT_PORT}:6333"
+      - "0.0.0.0:${QDRANT_PORT}:6333"
     volumes:
       - ./data/qdrant_storage:/qdrant/storage
 
@@ -28,7 +28,7 @@ services:
         source: pgdb-data
         target: "/var/lib/postgresql/data"
     ports:
-      - "127.0.0.1:${DBPORT}:5432"
+      - "0.0.0.0:${DBPORT}:5432"
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: ${DBUSER}
@@ -47,14 +47,14 @@ services:
         target: /root/.pgadmin
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${PGADMIN_PORT}:5050"
+      - "0.0.0.0:${PGADMIN_PORT}:5050"
 
   redis:
     image: "redis:6"
     user: "999:999"
     # command: redis-server --requirepass ${REDIS_PASSWORD}
     ports:
-      - "127.0.0.1:${REDIS_PORT}:6379"
+      - "0.0.0.0:${REDIS_PORT}:6379"
     volumes:
       - redis-data:/data
       - redis-conf:/usr/local/etc/redis/redis.conf
@@ -64,7 +64,7 @@ services:
     depends_on:
       - redis
     ports:
-      - 127.0.0.1:${REDIS_UI_PORT}:7843
+      - 0.0.0.0:${REDIS_UI_PORT}:7843
     volumes:
       - p3x-redis-ui-settings:/settings
 
