@@ -231,8 +231,8 @@ export default function AccountPage() {
         <UserFree>
           <Card variant="outlined" sx={{ bgcolor: 'black' }}>
             <stripe-pricing-table
-              pricing-table-id={process.env.NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID}
-              publishable-key={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
+              pricing-table-id="prctbl_1NbnH7JgG26rrnpzcuBhAtq0"
+              publishable-key="pk_live_6KviMaMj9Xf8WxvzQ80v7TfE"
               client-reference-id={session?.user?.id}
               customer-email={session?.user?.email}
             ></stripe-pricing-table>
