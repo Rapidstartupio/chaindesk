@@ -58,7 +58,7 @@ jobs:
             cd chaindesk
             # Writing secrets to the .dev/databerry/.dev/databerry/app.env file in superagent-latest directory
             echo "ANALYZE=$ANALYZE" > .dev/databerry/app.env
-            echo "NEXTAUTH_URL='http://68.183.29.239:3000'" >> .dev/databerry/app.env
+            echo "NEXTAUTH_URL='https://widget.rapidagent.ai'" >> .dev/databerry/app.env
             echo "NEXTAUTH_SECRET=$NEXTAUTH_SECRET" >> .dev/databerry/app.env
             echo "GITHUB_ID=$GITHUB_ID" >> .dev/databerry/app.env
             echo "GITHUB_SECRET=$GITHUB_SECRET" >> .dev/databerry/app.env
