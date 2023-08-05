@@ -50,6 +50,8 @@ jobs:
           EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}
           EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID: ${{ secrets.NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID }}
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << EOF
             set -e
@@ -58,6 +60,8 @@ jobs:
             cd chaindesk
             # Writing secrets to the .dev/databerry/.dev/databerry/app.env file in superagent-latest directory
             echo "ANALYZE=$ANALYZE" > .dev/databerry/app.env
+            echo "NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID=$NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID" >> .dev/databerry/app.env
+            echo "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY" >> .dev/databerry/app.env
             echo "NEXTAUTH_URL='https://widget.rapidagent.ai'" >> .dev/databerry/app.env
             echo "NEXTAUTH_SECRET=$NEXTAUTH_SECRET" >> .dev/databerry/app.env
             echo "GITHUB_ID=$GITHUB_ID" >> .dev/databerry/app.env
