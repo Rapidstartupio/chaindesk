@@ -1,0 +1,92 @@
+name: Deploy to production
+
+on:
+  push:
+    branches:
+      - main  # Change this to your production branch.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Deploy to production
+        env:
+          ANALYZE: "false"
+          NEXTAUTH_SECRET: "4yaibugg0ab0mkj"
+          GITHUB_ID: "XXX"
+          GITHUB_SECRET: "XXX"
+          GOOGLE_CLIENT_ID: "XXX"
+          GOOGLE_CLIENT_SECRET: "XXX"
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          QDRANT_API_URL: "http://qdrant:${QDRANT_PORT}"
+          REDIS_URL: "redis://redis:${REDIS_PORT}"
+          QDRANT_API_KEY: "password"
+          APP_AWS_ACCESS_KEY: "root"
+          APP_AWS_SECRET_KEY: "password"
+          NEXT_PUBLIC_AWS_ENDPOINT: "http://minio:${MINIO_PORT}"
+          NEXT_PUBLIC_S3_BUCKET_NAME: "databerry-dev"
+          NEXT_TELEMETRY_DISABLED: "1"
+          NEXT_PUBLIC_DASHBOARD_URL: "http://base-api:3000"
+          NEXT_PUBLIC_CRISP_PLUGIN_ID: "XXX"
+          CRISP_HOOK_SECRET: "XXX"
+          CRISP_TOKEN_ID: "XXX"
+          CRISP_TOKEN_KEY: "XXX"
+          NEXT_PUBLIC_SLACK_CLIENT_ID: "XXX"
+          SLACK_CLIENT_SECRET: "XXX"
+          SLACK_SIGNING_SECRET: "XXX"
+          SLACK_VERIFICATION_TOKEN: "XXX"
+          EMAIL_SERVER_USER: ${{ secrets.EMAIL_SERVER_USER }}
+          EMAIL_SERVER_PASSWORD: ${{ secrets.EMAIL_SERVER_PASSWORD }}
+          EMAIL_SERVER_HOST: ${{ secrets.EMAIL_SERVER_HOST }}
+          EMAIL_SERVER_PORT: ${{ secrets.EMAIL_SERVER_PORT }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << EOF
+            set -e
+            rm -rf chaindesk
+            git clone https://x-access-token:${{ secrets.ORG_GH_TOKEN }}@github.com/Rapidstartupio/chaindesk.git
+            cd chaindesk
+            # Writing secrets to the .dev/databerry/.dev/databerry/app.env file in superagent-latest directory
+            echo "ANALYZE=$ANALYZE" > .dev/databerry/app.env
+            echo "NEXTAUTH_SECRET=$NEXTAUTH_SECRET" >> .dev/databerry/app.env
+            echo "GITHUB_ID=$GITHUB_ID" >> .dev/databerry/app.env
+            echo "GITHUB_SECRET=$GITHUB_SECRET" >> .dev/databerry/app.env
+            echo "GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID" >> .dev/databerry/app.env
+            echo "GOOGLE_CLIENT_SECRET=$GOOGLE_CLIENT_SECRET" >> .dev/databerry/app.env
+            echo "OPENAI_API_KEY=$OPENAI_API_KEY" >> .dev/databerry/app.env
+            echo "DATABASE_URL=$DATABASE_URL" >> .dev/databerry/app.env
+            echo "QDRANT_API_URL=$QDRANT_API_URL" >> .dev/databerry/app.env
+            echo "REDIS_URL=$REDIS_URL" >> .dev/databerry/app.env
+            echo "QDRANT_API_KEY=$QDRANT_API_KEY" >> .dev/databerry/app.env
+            echo "APP_AWS_ACCESS_KEY=$APP_AWS_ACCESS_KEY" >> .dev/databerry/app.env
+            echo "APP_AWS_SECRET_KEY=$APP_AWS_SECRET_KEY" >> .dev/databerry/app.env
+            echo "NEXT_PUBLIC_AWS_ENDPOINT=$NEXT_PUBLIC_AWS_ENDPOINT" >> .dev/databerry/app.env
+            echo "NEXT_PUBLIC_S3_BUCKET_NAME=$NEXT_PUBLIC_S3_BUCKET_NAME" >> .dev/databerry/app.env
+            echo "NEXT_TELEMETRY_DISABLED=$NEXT_TELEMETRY_DISABLED" >> .dev/databerry/app.env
+            echo "NEXT_PUBLIC_DASHBOARD_URL=$NEXT_PUBLIC_DASHBOARD_URL" >> .dev/databerry/app.env
+            echo "NEXT_PUBLIC_CRISP_PLUGIN_ID=$NEXT_PUBLIC_CRISP_PLUGIN_ID" >> .dev/databerry/app.env
+            echo "CRISP_HOOK_SECRET=$CRISP_HOOK_SECRET" >> .dev/databerry/app.env
+            echo "CRISP_TOKEN_ID=$CRISP_TOKEN_ID" >> .dev/databerry/app.env
+            echo "CRISP_TOKEN_KEY=$CRISP_TOKEN_KEY" >> .dev/databerry/app.env
+            echo "NEXT_PUBLIC_SLACK_CLIENT_ID=$NEXT_PUBLIC_SLACK_CLIENT_ID" >> .dev/databerry/app.env
+            echo "SLACK_CLIENT_SECRET=$SLACK_CLIENT_SECRET" >> .dev/databerry/app.env
+            echo "SLACK_SIGNING_SECRET=$SLACK_SIGNING_SECRET" >> .dev/databerry/app.env
+            echo "SLACK_VERIFICATION_TOKEN=$SLACK_VERIFICATION_TOKEN" >> .dev/databerry/app.env
+            echo "EMAIL_SERVER_USER=$EMAIL_SERVER_USER" >> .dev/databerry/app.env
+            echo "EMAIL_SERVER_PASSWORD=$EMAIL_SERVER_PASSWORD" >> .dev/databerry/app.env
+            echo "EMAIL_SERVER_HOST=$EMAIL_SERVER_HOST" >> .dev/databerry/app.env
+            echo "EMAIL_SERVER_PORT=$EMAIL_SERVER_PORT" >> .dev/databerry/app.env
+            echo "EMAIL_FROM=$EMAIL_FROM" >> .dev/databerry/app.env
+            # continue with your process
+            npm run docker:compose
+          EOF
