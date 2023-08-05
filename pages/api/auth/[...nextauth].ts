@@ -93,5 +93,19 @@ export const authOptions = {
       };
     },
   },
+  redirect: {
+    signIn: async (url, baseUrl) => {
+      return Promise.resolve(baseUrl);
+    },
+    signOut: async (url, baseUrl) => {
+      return Promise.resolve(baseUrl);
+    },
+    error: async (url, baseUrl) => {
+      return Promise.resolve(baseUrl + '/error');
+    },
+    callback: async (url, baseUrl) => {
+      return Promise.resolve(url);
+    },
+  }
 } as AuthOptions;
 export default NextAuth(authOptions);
