@@ -53,7 +53,7 @@ function chaindesk_plugin_settings_page() {
   $is_chaindesk_working = isset($agent_id) && !empty($agent_id);
   $http_callback = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
   // $base_url = "http://localhost:3000";
-  $base_url = "https://app.chaindesk.ai";
+  $base_url = "http://68.183.29.239:3000";
   $add_to_chaindesk_link = $base_url."/integrations/wordpress/config?callback=$http_callback&siteurl=".get_option('siteurl')."&agentId=".$agent_id;
 ?>
 
@@ -72,7 +72,7 @@ function chaindesk_plugin_settings_page() {
 
       <a class="chaindesk-button chaindesk-neutral" href="<?php echo $add_to_chaindesk_link; ?>"><?php _e('Reconfigure', 'chaindesk'); ?></a>
 
-      
+
     </div>
 
     <!-- <p class="chaindesk-notice"><?php _e('Loving Chaindesk <b style="color:red">♥</b> ? Rate us on the <a target="_blank" href="https://wordpress.org/support/plugin/chaindesk/reviews/?filter=5">Wordpress Plugin Directory</a>', 'chaindesk'); ?></p> -->
@@ -106,14 +106,14 @@ function chaindesk_hook_head() {
     return;
   }
 
-  $output="<script 
-    data-cfasync='false' 
+  $output="<script
+    data-cfasync='false'
     data-name='databerry-chat-bubble'
     id='$agent_id'
     src='https://cdn.jsdelivr.net/npm/@databerry/chat-bubble@latest'
   >";
 
   $output .= "</script>";
-  
+
   echo $output;
 }
