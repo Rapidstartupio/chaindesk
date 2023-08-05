@@ -68,7 +68,7 @@ async function main() {
     );
   } catch (err) {
     console.log('prisma seed err', err);
-    throw err;
+    //throw err;
   }
 }
 
