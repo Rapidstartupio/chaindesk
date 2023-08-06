@@ -16,7 +16,7 @@ export default function Pricing() {
   return (
     <>
       <Head>
-        <title>Chaindesk Pricing - Plans for Teams of All Sizes</title>
+        <title>RapidAgent Pricing - Plans for Teams of All Sizes</title>
 
         <meta
           name="title"
@@ -28,7 +28,7 @@ export default function Pricing() {
         />
         <meta
           name="keywords"
-          content="Chaindesk, Pricing, Data Processing, AI, Agents, Datastores, Queries, File Upload, Data Synching, API, ChatGPT Plugin, Slack Bot, Crisp Plugin, Website Loader"
+          content="RapidAgent, Pricing, Data Processing, AI, Agents, Datastores, Queries, File Upload, Data Synching, API, ChatGPT Plugin, Slack Bot, Crisp Plugin, Website Loader"
         />
         <meta name="robots" content="index, follow" />
       </Head>
@@ -49,7 +49,7 @@ const tiers = [
   {
     name: 'Discover',
     id: 'tier-free',
-    href: 'https://app.chaindesk.ai/account',
+    href: 'https://widget.rapidagent.ai/account',
     price: { monthly: '$0', annually: '$0' },
     description: 'The essentials to get started quickly.',
     features: [
@@ -71,8 +71,8 @@ const tiers = [
   {
     name: 'Startup',
     id: 'tier-startup',
-    href: 'https://app.chaindesk.ai/account',
-    price: { monthly: '$25', annually: '$250' },
+    href: 'https://widget.rapidagent.ai/account',
+    price: { monthly: '$29', annually: '$290' },
     description: 'A plan that scales with your rapidly growing business.',
     features: [
       `${accountConfig['level_1'].limits.maxAgents} agent(s)`,
@@ -97,8 +97,8 @@ const tiers = [
   {
     name: 'Pro',
     id: 'tier-pro',
-    href: 'https://app.chaindesk.ai/account',
-    price: { monthly: '$99', annually: '$990' },
+    href: 'https://widget.rapidagent.ai/account',
+    price: { monthly: '$79', annually: '$790' },
     description: 'Dedicated support and for your company.',
     features: [
       `${accountConfig['level_2'].limits.maxAgents} agent(s)`,
@@ -121,7 +121,7 @@ const tiers = [
   {
     name: 'Enterprise',
     id: 'tier-enterprise',
-    href: 'https://app.chaindesk.ai/account',
+    href: 'https://widget.rapidagent.ai/account',
     price: { monthly: '$499', annually: '$4990' },
     description:
       'You’ve got a huge amount of assets but it’s not enough. To the moon.',

@@ -28,9 +28,9 @@ export function Footer() {
                 </Button>
               </Link> */}
               <NavLink href="/pricing">Pricing</NavLink>
-              <NavLink href="https://github.com/gmpetrov/chaindesk" target={"_blank"}>GitHub</NavLink>
-              <NavLink href="https://docs.chaindesk.ai/" target={"_blank"}>Docs</NavLink>
-              <NavLink href="https://databerry.getrewardful.com/" target={"_blank"}>
+              <NavLink href="https://github.com/rapidstartup" target={"_blank"}>GitHub</NavLink>
+              <NavLink href="https://widget-docs.rapidagent.ai/" target={"_blank"}>Docs</NavLink>
+              <NavLink href="https://rapidagent.getrewardful.com/" target={"_blank"}>
                 Affiliates
               </NavLink>
               <NavLink href="/privacy" target={"_blank"}>
@@ -71,10 +71,10 @@ export function Footer() {
             </Link> */}
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Chaindesk. All rights
+            Copyright &copy; {new Date().getFullYear()} RapidAgent. All rights
             reserved.
           </p>
-          <p>Made in France 🇫🇷</p>
+          <p>Made in Auatralia</p>
         </div>
       </Container>
     </footer>

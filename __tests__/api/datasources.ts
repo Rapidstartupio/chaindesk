@@ -31,10 +31,10 @@ describe('Datasources - Create', () => {
     try {
       const result = await testHttp.post('/api/datasources', {
         datastoreId: process.env.TEST_DATASTORE_ID,
-        name: 'Chaindesk Landingpage',
+        name: 'RapidAgent Landingpage',
         type: 'web_page',
         config: {
-          source_url: 'https://www.chaindesk.ai/',
+          source_url: 'https://widget.rapidagent.ai/',
         },
       } as UpsertDatasourceSchema);
 

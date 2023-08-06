@@ -82,19 +82,19 @@ function MobileNavigation() {
             className="absolute inset-x-0 flex flex-col p-4 mt-4 text-lg tracking-tight origin-top bg-white shadow-xl top-full rounded-2xl text-slate-900 ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="/pricing">Pricing</MobileNavLink>
-            <MobileNavLink href="https://github.com/gmpetrov/chaindesk" target={'_blank'}>
+            <MobileNavLink href="https://github.com/rapidstartup" target={'_blank'}>
               GitHub
             </MobileNavLink>
-            <MobileNavLink href="https://docs.chaindesk.ai/" target={'_blank'}>
+            <MobileNavLink href="https://widget-docs.rapidagent.ai/" target={'_blank'}>
               Docs
             </MobileNavLink>
-            <MobileNavLink href="https://databerry.getrewardful.com/" target={'_blank'}>
+            <MobileNavLink href="https://rapidagent.getrewardful.com/" target={'_blank'}>
               Affiliates
             </MobileNavLink>
             {/* <MobileNavLink href="#testimonials">Testimonials</MobileNavLink> */}
             {/* <MobileNavLink href="#pricing">Pricing</MobileNavLink> */}
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="https://app.chaindesk.ai">
+            <MobileNavLink href="https://widget.rapidagent.ai">
               Sign in
             </MobileNavLink>
           </Popover.Panel>
@@ -130,13 +130,13 @@ export function Header() {
 <Menu />
 
               <NavLink href="/pricing">Pricing</NavLink>
-              <NavLink href="https://github.com/gmpetrov/chaindesk" target={'_blank'}>
+              <NavLink href="https://github.com/rapidstartup" target={'_blank'}>
                 GitHub
               </NavLink>
-              <NavLink href="https://docs.chaindesk.ai/" target={'_blank'}>
+              <NavLink href="https://widget-docs.rapidagent.ai/" target={'_blank'}>
                 Docs
               </NavLink>
-              <NavLink href="https://databerry.getrewardful.com/" target={"_blank"}>
+              <NavLink href="https://rapidagent.getrewardful.com/" target={"_blank"}>
                 Affiliates
               </NavLink>
               {/* <NavLink href="#testimonials">Testimonials</NavLink> */}
@@ -153,7 +153,7 @@ export function Header() {
               </span>
             </Button> */}
             {/* Change following link href with /signin for local signin */}
-            <Link href="https://app.chaindesk.ai/signin">
+            <Link href="https://widget.rapidagent.ai/signin">
               <Button variant="outlined" sx={{ borderRadius: 100 }}>
                 Sign In
               </Button>

@@ -8,7 +8,7 @@ export default function TestPage() {
   return (
     <>
       <main className="flex flex-col min-h-full">
-        <h1>HELLO WORLR</h1>
+        <h1>HELLO WORLD</h1>
       </main>
     </>
   );

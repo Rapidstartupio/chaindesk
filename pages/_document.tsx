@@ -36,7 +36,7 @@ class CustomDocument extends Document {
           />
 
           <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-QTN3QP6PKB"
+            src="https://www.googletagmanager.com/gtag/js?id=G-1234567"
             strategy="afterInteractive"
           />
           <Script id="google-analytics" strategy="afterInteractive">
@@ -45,11 +45,11 @@ class CustomDocument extends Document {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-QTN3QP6PKB');
+          gtag('config', 'G-1234567');
         `}
           </Script>
 
-          <Script id="hotjar" strategy="afterInteractive">
+          {/*<Script id="hotjar" strategy="afterInteractive">
             {`(function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:3480619,hjsv:6};
@@ -58,12 +58,12 @@ class CustomDocument extends Document {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-          </Script>
+        </Script>*/}
 
           <script
             async
             src="https://r.wdfl.co/rw.js"
-            data-rewardful="cb12e7"
+            data-rewardful="12345"
           ></script>
           <Script id="rewardfull" strategy="afterInteractive">
             {`(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');`}

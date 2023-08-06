@@ -55,13 +55,13 @@ export function Hero() {
       mt={6}
       >
 
-      <Link target='_blank' href={'https://app.chaindesk.ai/signin'}>
+      <Link target='_blank' href={'https://widget.rapidagent.ai/signin'}>
         <Button variant="solid" size="lg"
           // startDecorator={<RocketLaunchRounded />}
           sx={{borderRadius: 100}}
           >{`⚡️ Get Started Now`}</Button>
       </Link>
-      <Link target='_blank' href={'https://calendly.com/databerry-georges/15min'}>
+      <Link target='_blank' href={'https://calendly.com/rapidexecutive'}>
         <Button variant="outlined" size="lg"
           startDecorator={<PhoneRoundedIcon />}
           sx={{borderRadius: 100}}

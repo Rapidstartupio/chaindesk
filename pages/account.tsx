@@ -406,7 +406,7 @@ export default function AccountPage() {
             <FormLabel>API Keys</FormLabel>
 
             <Typography level="body3">
-              Use the api key to access the Chaindesk API
+              Use the api key to access the RapidAgent API
             </Typography>
 
             <Stack direction={'column'} gap={2} mt={2}>
@@ -414,7 +414,7 @@ export default function AccountPage() {
                 color="info"
                 startDecorator={<HelpOutlineRoundedIcon />}
                 endDecorator={
-                  <Link href="https://docs.chaindesk.ai" target="_blank">
+                  <Link href="https://widget-docs.rapidagent.ai" target="_blank">
                     <Button
                       variant="plain"
                       size="sm"
@@ -425,7 +425,7 @@ export default function AccountPage() {
                   </Link>
                 }
               >
-                Learn more about the Datatberry API
+                Learn more about the RapidAgent API
               </Alert>
               {getApiKeysQuery?.data?.map((each) => (
                 <>

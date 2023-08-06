@@ -204,7 +204,7 @@ export function HeroChatGPTPlugin() {
                 </Stack>
                 <Typography textColor="text.secondary">
                   <b>+3.5K</b> companies have successfully <br></br>built their
-                  custom AI Agent with Chaindesk.ai
+                  custom AI Agent with RapidAgent.ai
                 </Typography>
               </Stack>
             </Box>
@@ -218,7 +218,7 @@ export function HeroChatGPTPlugin() {
               mt={6}
               className="justify-center sm:justify-start"
             >
-              <Link target="_blank" href={'https://app.chaindesk.ai/signin'}>
+              <Link target="_blank" href={'https://widget.rapidagent.ai/signin'}>
                 <Button
                   variant="solid"
                   size="lg"
@@ -228,7 +228,7 @@ export function HeroChatGPTPlugin() {
               </Link>
               <Link
                 target="_blank"
-                href={'https://calendly.com/databerry-georges/15min'}
+                href={'https://calendly.com/rapidexecutive'}
               >
                 <Button
                   variant="outlined"
@@ -247,7 +247,7 @@ export function HeroChatGPTPlugin() {
             <div className='w-full h-[500px] overflow-hidden rounded-3xl bg-white'>
 
             <iframe
-              src="https://app.chaindesk.ai/agents/clgtujkqh022j0u0zw3ut8vk3/iframe"
+              src="https://widget.rapidagent.ai/agents/clgtujkqh022j0u0zw3ut8vk3/iframe"
               width="100%"
               height="100%"
               frameBorder="0"

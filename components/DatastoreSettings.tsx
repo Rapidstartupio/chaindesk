@@ -202,7 +202,7 @@ function PluginSettings({ datastore }: { datastore: Datastore }) {
           <FormLabel>Name for humans (required, 20 character max)</FormLabel>
           <Input
             control={methods.control as any}
-            placeholder="e.g. Chaindesk"
+            placeholder="e.g. RapidAgent"
             {...methods.register('pluginName')}
           />
         </FormControl>
@@ -212,7 +212,7 @@ function PluginSettings({ datastore }: { datastore: Datastore }) {
           </FormLabel>
           <Input
             control={methods.control as any}
-            placeholder="e.g. Chaindesk is a no-code platform for building AI apps..."
+            placeholder="e.g. RapidAgent is a no-code platform for building AI apps..."
             {...methods.register('pluginDescriptionForHumans')}
           />
         </FormControl>
@@ -395,7 +395,7 @@ function DatastoreSettings() {
               </Link>
             }
           >
-            Learn more about the Datatberry API
+            Learn more about the RapidAgent API
           </Alert>
 
           <Alert

@@ -84,15 +84,15 @@ const solutions = [
   //   ),
   // },
   {
-    name: 'Datberry API',
+    name: 'RapidAgent API',
     description: 'Document Retrieval as a service',
-    href: 'https://docs.chaindesk.ai/introduction',
+    href: 'https://widget-docs.rapidagent.ai/introduction',
     icon: ServerIcon,
   },
   {
     name: 'On Premise',
-    description: 'Install Chaindesk on your own infrastructure',
-    href: 'https://github.com/gmpetrov/chaindesk',
+    description: 'Install RapidAgent on your own infrastructure',
+    href: 'https://github.com/rapidstartup',
     icon: CpuChipIcon,
   },
 ];
@@ -104,7 +104,7 @@ const callsToAction = [
   },
   {
     name: 'Book a Call',
-    href: 'https://calendly.com/databerry-georges/15min',
+    href: 'https://calendly.com/rapidexecutive',
     icon: PhoneIcon,
   },
 ];

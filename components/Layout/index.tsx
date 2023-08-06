@@ -100,7 +100,7 @@ export default function Layout(props: Props) {
             </IconButton> */}
             <Logo className="w-10" />
             <Typography component="h1" fontWeight="xl">
-              Chaindesk
+              RapidAgent
             </Typography>
 
             {session?.user?.isPremium && (
