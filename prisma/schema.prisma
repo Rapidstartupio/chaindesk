@@ -17,6 +17,7 @@ model User {
   image    String?
   accounts Account[]
   sessions Session[]
+  role String? @default("user")
 
   picture       String?
   hasOptInEmail Boolean? @default(false) @map("has_opt_in_email")
