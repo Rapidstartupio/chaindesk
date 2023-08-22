@@ -1,6 +1,6 @@
 const baseApiUrl = process.env.API_URL
   ? process.env.API_URL
-  : 'https://api.chaindesk.ai';
+  : 'https://widget.rapidagent.ai.ai';
 
 module.exports = {
   type: 'custom',

@@ -24,7 +24,7 @@ export default function Pricing() {
         />
         <meta
           name="description"
-          content="Choose an affordable plan with Chaindesk. Our offerings include Discover, Startup, Pro, and Enterprise levels, each packed with features for engaging your audience, creating customer loyalty, and driving sales."
+          content="Choose an affordable plan with RapidAgent. Our offerings include Discover, Startup, Pro, and Enterprise levels, each packed with features for engaging your audience, creating customer loyalty, and driving sales."
         />
         <meta
           name="keywords"
@@ -63,7 +63,7 @@ const tiers = [
         accountConfig['level_0'].limits.maxDataProcessing / 1000000
       }MB / month`,
       'Manual data synching',
-      'Access to Chaindesk API',
+      'Access to RapidAgent API',
       // 'ChatGPT plugin',
     ],
     mostPopular: false,

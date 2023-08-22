@@ -48,7 +48,7 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'api.chaindesk.ai',
+            value: 'widget.rapidagent.ai.ai',
           },
         ],
       },
@@ -58,7 +58,7 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'api.chaindesk.ai',
+            value: 'widget.rapidagent.ai.ai',
           },
         ],
       },
@@ -72,7 +72,7 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'api.chaindesk.ai',
+            value: 'widget.rapidagent.ai.ai',
           },
         ],
       },

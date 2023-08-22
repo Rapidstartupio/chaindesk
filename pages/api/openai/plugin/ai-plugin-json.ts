@@ -71,8 +71,8 @@ export const generateAiPluginJson = async (
     },
     logo_url:
       datastore.pluginIconUrl || `${proto}://${host}/.well-known/logo.png`,
-    contact_email: 'support@chaindesk.ai',
-    legal_info_url: 'support@chaindesk.ai',
+    contact_email: 'support@rapidagent.ai',
+    legal_info_url: 'support@rapidagent.ai',
   };
 
   return res.json(config);

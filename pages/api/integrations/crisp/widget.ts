@@ -73,8 +73,8 @@ export const widgetActions = async (
       from: 'operator',
       origin: 'chat',
       user: {
-        nickname: 'Chaindesk.ai',
-        avatar: 'https://chaindesk.ai/app-rounded-bg-white.png',
+        nickname: 'Rapidagent.ai',
+        avatar: 'https://widget.rapidagent.ai/app-rounded-bg-white.png',
       },
       stealth: true,
       content: `Summary:\n${output}`,

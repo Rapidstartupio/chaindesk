@@ -384,7 +384,7 @@ function DatastoreSettings() {
             color="info"
             startDecorator={<HelpOutlineRoundedIcon />}
             endDecorator={
-              <Link href="https://docs.chaindesk.ai" target="_blank">
+              <Link href="https://widget-docs.rapidagent.ai" target="_blank">
                 <Button
                   variant="plain"
                   size="sm"

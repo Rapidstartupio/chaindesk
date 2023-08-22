@@ -381,7 +381,7 @@ function ChatBox({
 
             {!disableWatermark && (
               <a
-                href="https://chaindesk.ai"
+                href="https://widget.rapidagent.ai"
                 target="_blank"
                 style={{
                   textDecoration: 'none',
@@ -392,7 +392,7 @@ function ChatBox({
                   <Typography level="body3">
                     Powered by{' '}
                     <Typography color="primary" fontWeight={'bold'}>
-                      Chaindesk
+                      RapidAgent
                     </Typography>
                   </Typography>
                 </Box>

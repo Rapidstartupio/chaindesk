@@ -133,7 +133,7 @@ export const capture = async (req: AppNextApiRequest, res: NextApiResponse) => {
     </style>
   </head>
   <body>
-    <h2>Chaindesk.ai</h2>
+    <h2>RapidAgent.ai</h2>
     <h3>Visitor requested assistance</h3>
 
     <p>Visitor Email: <strong>${data.visitorEmail}</strong></p>

@@ -73,20 +73,20 @@ function App(props: { agent: Agent }) {
           rel="stylesheet"
         />
 
-        <title>{`${props?.agent?.name} - made with Chaindesk.ai`}</title>
+        <title>{`${props?.agent?.name} - made with RapidAgent.ai`}</title>
 
         <meta
           name="title"
-          content={`${props?.agent?.name} - made with Chaindesk.ai`}
+          content={`${props?.agent?.name} - made with RapidAgent.ai`}
         />
         <meta name="description" content={`${props?.agent?.description}`} />
         <meta
           name="keywords"
-          content="AI chatbot, No-code platform, Customer support, Onboarding, Slack AI chatbot, Automation, Chaindesk, ChatGPT Plugin"
+          content="AI chatbot, No-code platform, Customer support, Onboarding, Slack AI chatbot, Automation, RapidAgent, ChatGPT Plugin"
         />
         <meta
           property="og:title"
-          content={`${props?.agent?.name} - made with Chaindesk.ai`}
+          content={`${props?.agent?.name} - made with RapidAgent.ai`}
         />
         <meta
           property="og:description"
@@ -94,9 +94,9 @@ function App(props: { agent: Agent }) {
         />
         <meta
           property="og:url"
-          content={`https://chaindesk.ai/@${props?.agent?.handle}`}
+          content={`https://widget.rapidagent.ai/@${props?.agent?.handle}`}
         />
-        <meta property="og:site_name" content="Chaindesk" />
+        <meta property="og:site_name" content="RapidAgent" />
         <meta property="og:type" content="website" />
       </Head>
 
@@ -115,7 +115,7 @@ function App(props: { agent: Agent }) {
           >
             <CircularProgress color="neutral" />
             <a
-              href="https://chaindesk.ai"
+              href="https://widget.rapidagent.ai"
               target="_blank"
               style={{
                 textDecoration: 'none',
@@ -125,7 +125,7 @@ function App(props: { agent: Agent }) {
                 <Typography level="body2">
                   Powered by{' '}
                   <Typography color="primary" fontWeight={'bold'}>
-                    Chaindesk
+                    RapidAgent
                   </Typography>
                 </Typography>
               </Box>

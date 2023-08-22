@@ -251,7 +251,7 @@ export default function AccountPage() {
         <FormControl id="plan" sx={{ gap: 1 }}>
           <FormLabel>Current Plan</FormLabel>
           {/* <Typography level="body3">
-            Use the api key to access the Chaindesk API
+            Use the api key to access the RapidAgent API
           </Typography> */}
 
           <Card variant="outlined">

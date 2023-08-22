@@ -255,8 +255,8 @@ const handleQuery = async (
     },
     user: {
       type: 'participant',
-      nickname: agent?.name || 'Chaindesk.ai',
-      avatar: agent.iconUrl || 'https://chaindesk.ai/app-rounded-bg-white.png',
+      nickname: agent?.name || 'RapidAgent.ai',
+      avatar: agent.iconUrl || 'https://widget.rapidagent.ai/app-rounded-bg-white.png',
     },
   });
 

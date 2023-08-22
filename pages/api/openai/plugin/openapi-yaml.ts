@@ -48,7 +48,7 @@ export const generateOpenApiYaml = async (
   doc.setIn(['info', 'description'], datastore.description);
   doc.setIn(
     ['info', 'servers', 0, 'url'],
-    `https://api.chaindesk.ai/datastores/query/${datastore.id}`
+    `https://widget.rapidagent.ai.ai/datastores/query/${datastore.id}`
     // `http://localhost:3000`
   );
 

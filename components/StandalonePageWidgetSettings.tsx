@@ -264,7 +264,7 @@ export default function StandalonePageSettings(props: Props) {
                           writeClipboard({ content: pageURL });
                         }}
                       >
-                        {`chaindesk.ai/@${botHandle}`}
+                        {`widget.rapidagent.ai/@${botHandle}`}
                       </Chip>
                       <Alert color="warning" sx={{ width: '100%' }}>
                         Anyone can access your agent from this URL
