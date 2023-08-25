@@ -39,6 +39,19 @@ export default function App({
 
   useUTMTracking();
 
+  // Redirect to new domain on front side as DNS redirect breaks some features
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (window.location.host === 'app.databerry.ai') {
+        window.location.href = window.location.href.replace(
+          'app.databerry.ai',
+          'widget.rapidagent.ai'
+        );
+      }
+    }
+  }, []);
+
+
   if (router.pathname === '/agents/[agentId]/iframe') {
     return getLayout(
       <SessionProvider>
