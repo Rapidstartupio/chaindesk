@@ -20,7 +20,7 @@
     "worker:datasource-loader": "dotenv -e .env.local -- npx tsx --watch workers/datasource-loader.ts",
     "dotenv": "dotenv -e .env.local",
     "set-env:prod": "cat .env.prod.local | xargs flyctl --config fly/fly.toml secrets set",
-    "docker:compose": "docker-compose -f .dev/databerry/docker-compose.yml --env-file .dev/databerry/docker.env up -d --force-recreate --build",
+    "docker:compose": "docker-compose -f .dev/databerry/docker-compose.yml --env-file .dev/databerry/docker.env up -d ",
     "stripe:dev": "stripe listen --forward-to 68.183.29.239:3000/api/stripe/webhook",
     "docker:compose:deps": "docker compose -f .dev/databerry/docker-compose.deps.yml --env-file .dev/databerry/docker.env",
     "docker:compose:app": "docker compose -f .dev/databerry/docker-compose.app.yml --env-file .dev/databerry/docker.env"

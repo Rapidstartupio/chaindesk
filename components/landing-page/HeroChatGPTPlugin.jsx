@@ -247,7 +247,7 @@ export function HeroChatGPTPlugin() {
             <div className='w-full h-[500px] overflow-hidden rounded-3xl bg-white'>
 
             <iframe
-              src="https://widget.rapidagent.ai/agents/cllqw2lvo0001bzofgvph19nv/iframe"
+              src="https://widget.rapidagent.ai/agents/cllqwgd240002bypb4aa7bsh6/iframe"
               width="100%"
               height="100%"
               frameBorder="0"
