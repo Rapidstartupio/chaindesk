@@ -93,5 +93,8 @@ jobs:
             echo "EMAIL_SERVER_PORT=$EMAIL_SERVER_PORT" >> .dev/databerry/app.env
             echo "EMAIL_FROM=$EMAIL_FROM" >> .dev/databerry/app.env
             # continue with your process
+            docker stop databerry_base-api_1
+            docker rm databerry_base-api_1
+            docker rmi databerry_base-api
             npm run docker:compose
           EOF
