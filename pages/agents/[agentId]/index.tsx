@@ -148,11 +148,7 @@ export default function AgentPage() {
     router.replace(router);
   };
 
-  React.useEffect(() => {
-    if (typeof window !== 'undefined' && !router.query.tab) {
-      handleChangeTab('chat');
-    }
-  }, [router.query.tab]);
+
 
   if (!getAgentQuery?.data) {
     return null;
