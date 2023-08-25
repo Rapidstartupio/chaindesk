@@ -43,17 +43,17 @@ const nextConfig = {
       //   destination: '/api/datastores/:id/:path*',
       // },
       {
-        source: '/datastores/:path*',
+        source: '/api/datastores/:path*',
         destination: '/api/datastores/:path*',
         has: [
           {
             type: 'host',
-            value: 'widget.rapidagent.ai.ai',
+            value: 'widget.rapidagent.ai',
           },
         ],
       },
       {
-        source: '/datasources/:path*',
+        source: '/api/datasources/:path*',
         destination: '/api/datasources/:path*',
         has: [
           {
@@ -63,11 +63,11 @@ const nextConfig = {
         ],
       },
       {
-        source: '/agents/query/:id',
+        source: '/api/agents/query/:id',
         destination: '/api/agents/:id/query',
       },
       {
-        source: '/agents/:path*',
+        source: '/api/agents/:path*',
         destination: '/api/agents/:path*',
         has: [
           {
