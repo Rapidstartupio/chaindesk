@@ -16,7 +16,7 @@ jobs:
       - name: Install SSH key
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          ssh-private-key: ${{ secrests.DEPLOY_SSH_KEY }}
 
       - name: Deploy to production
         env:
@@ -100,5 +100,9 @@ jobs:
             echo "DBPASS=$DBPASS" >> .dev/databerry/docker.env
             echo "PGADMIN_DEFAULT_PASSWORD=$PGADMIN_DEFAULT_PASSWORD" >> .dev/databerry/docker.env
             echo "REDIS_PASSWORD=$REDIS_PASSWORD" >> .dev/databerry/docker.env
+
+
+            echo "DATABASE_URL=$DATABASE_URL" >> .env
+
             npm run docker:compose
           EOF
