@@ -100,9 +100,5 @@ jobs:
             echo "DBPASS=$DBPASS" >> .dev/databerry/docker.env
             echo "PGADMIN_DEFAULT_PASSWORD=$PGADMIN_DEFAULT_PASSWORD" >> .dev/databerry/docker.env
             echo "REDIS_PASSWORD=$REDIS_PASSWORD" >> .dev/databerry/docker.env
-            # continue with your process
-            docker stop databerry_base-api_1
-            docker rm databerry_base-api_1
-            docker rmi databerry_base-api
             npm run docker:compose
           EOF
