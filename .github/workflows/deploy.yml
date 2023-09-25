@@ -20,6 +20,9 @@ jobs:
 
       - name: Deploy to production
         env:
+          DBPASS: ${{ secrets.DBPASS }}
+          PGADMIN_DEFAULT_PASSWORD: ${{ secrets.PGADMIN_DEFAULT_PASSWORD }}
+          REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
           ANALYZE: "false"
           NEXTAUTH_SECRET: "4yaibugg0ab0mkj"
           GITHUB_ID: "XXX"
@@ -92,6 +95,11 @@ jobs:
             echo "EMAIL_SERVER_HOST=$EMAIL_SERVER_HOST" >> .dev/databerry/app.env
             echo "EMAIL_SERVER_PORT=$EMAIL_SERVER_PORT" >> .dev/databerry/app.env
             echo "EMAIL_FROM=$EMAIL_FROM" >> .dev/databerry/app.env
+
+            # echo for docker.env now
+            echo "DBPASS=$DBPASS" >> .dev/databerry/docker.env
+            echo "PGADMIN_DEFAULT_PASSWORD=$PGADMIN_DEFAULT_PASSWORD" >> .dev/databerry/docker.env
+            echo "REDIS_PASSWORD=$REDIS_PASSWORD" >> .dev/databerry/docker.env
             # continue with your process
             docker stop databerry_base-api_1
             docker rm databerry_base-api_1
