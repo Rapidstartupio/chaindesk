@@ -20,6 +20,8 @@ RUN \
     fi
 RUN rm -rf node_modules/.pnpm/canvas@2.11.2
 
+
+
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
@@ -33,6 +35,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 RUN mv next.config.docker.js next.config.js
 RUN yarn prisma:generate
 
+
 ARG NEXT_PUBLIC_S3_BUCKET_NAME
 ARG NEXT_PUBLIC_DASHBOARD_URL
 ARG NEXT_PUBLIC_SLACK_CLIENT_ID
@@ -41,10 +44,10 @@ ARG NEXT_PUBLIC_STRIPE_PAYMENT_LINK_LEVEL_1
 ARG NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID
 ARG NEXT_PUBLIC_CRISP_PLUGIN_ID
 
-RUN NODE_OPTIONS="--max_old_space_size=4096" yarn build
+#RUN NODE_OPTIONS="--max_old_space_size=4096" yarn build
 
 # If using npm comment out above and use below instead
-# RUN npm run build
+RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
