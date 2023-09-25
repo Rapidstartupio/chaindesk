@@ -70,7 +70,7 @@ ARG NEXT_PUBLIC_CRISP_PLUGIN_ID
 ARG NEXT_PUBLIC_GA_ID
 ARG NEXT_PUBLIC_HOTJAR_ID
 
-RUN NODE_OPTIONS="--max_old_space_size=4096" npm run build
+RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
