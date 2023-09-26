@@ -20,6 +20,7 @@ jobs:
 
       - name: Deploy to production
         env:
+          MINIO_PASSWORD: ${{ secrets.MINIO_PASSWORD }}
           DBPASS: ${{ secrets.DBPASS }}
           PGADMIN_DEFAULT_PASSWORD: ${{ secrets.PGADMIN_DEFAULT_PASSWORD }}
           REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
@@ -100,6 +101,7 @@ jobs:
             echo "DBPASS=$DBPASS" >> .dev/databerry/docker.env
             echo "PGADMIN_DEFAULT_PASSWORD=$PGADMIN_DEFAULT_PASSWORD" >> .dev/databerry/docker.env
             echo "REDIS_PASSWORD=$REDIS_PASSWORD" >> .dev/databerry/docker.env
+            echo "MINIO_PASSWORD=$MINIO_PASSWORD" >> .dev/databerry/docker.env
 
 
             echo "DATABASE_URL=$DATABASE_URL" >> .env
