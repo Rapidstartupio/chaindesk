@@ -36,7 +36,7 @@ jobs:
           REDIS_URL: "redis://redis:6379"
           QDRANT_API_KEY: "password"
           APP_AWS_ACCESS_KEY: "root"
-          APP_AWS_SECRET_KEY: "password"
+          APP_AWS_SECRET_KEY: ${{ secrets.MINIO_PASSWORD }}
           NEXT_PUBLIC_AWS_ENDPOINT: "https://minio-s3.rapidagent.ai"
           NEXT_PUBLIC_S3_BUCKET_NAME: "databerry-dev"
           NEXT_TELEMETRY_DISABLED: "1"
