@@ -41,7 +41,7 @@ ARG NEXT_PUBLIC_STRIPE_PAYMENT_LINK_LEVEL_1
 ARG NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID
 ARG NEXT_PUBLIC_CRISP_PLUGIN_ID
 
-RUN  yarn build
+RUN NODE_OPTIONS="--max_old_space_size=4096" yarn build
 
 # If using npm comment out above and use below instead
 # RUN npm run build
@@ -52,7 +52,7 @@ WORKDIR /app
 
 ENV NODE_ENV production
 # Uncomment the following line in case you want to disable telemetry during runtime.
-ENV NEXT_TELEMETRY_DISABLED 1
+# ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -73,7 +73,7 @@ RUN \
     elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i ; \
     else echo "Lockfile not found." && exit 1; \
     fi
-
+RUN rm -rf node_modules/.pnpm/canvas@2.11.2
 
 USER nextjs
 
